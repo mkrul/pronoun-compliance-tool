@@ -132,7 +132,7 @@ function App() {
         <form onSubmit={handleSubmit}>
           <div className="input-section">
             <label>
-              Input Non-Compliant Text Below:
+              Input Non-Compliant Email Content Below:
               <textarea
                 value={inputText}
                 onChange={handleInputChange}
