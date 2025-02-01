@@ -1,10 +1,39 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
   const [inputText, setInputText] = useState('');
   const [outputText, setOutputText] = useState('');
   const [processCount, setProcessCount] = useState(0);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [loadingMessage, setLoadingMessage] = useState('');
+
+  const bureaucraticMessages = [
+    "Reviewing Email Signature Compliance Protocols...",
+    "Validating Legal Name Requirements...",
+    "Initiating Gender Ideology Detection Scan...",
+    "Reviewing Biological Truth Parameters...",
+    "Establishing Wokeism Prevention Protocol...",
+    "Scheduling Meeting That Could Have Been An Email...",
+    "Inculcating Compliance Metrics...",
+    "Generating Compliance Certificate...",
+    "Synergizing Oligarchic Workflows...",
+    "Implementing Circular Logic Protocols...",
+    "Activating Gender Ideology Detection Algorithm...",
+    "Defending Women from Email Signatures...",
+    "Restoring Biological Truth...",
+    "Reviewing Section 2(f) Compliance Matrix...",
+    "Quantifying Inculcation Metrics...",
+    "Calculating Taxpayer Savings...",
+    "Reviewing Acceptable Times New Roman Variants...",
+    "Submitting Form 1103(a)(1) in Quintuplicate...",
+    "Validating Biological Email Format...",
+    "Detecting Non-Compliant Outlook Features...",
+    "Measuring Social Fabric Integrity...",
+    "Cross-Referencing Legal Name Database...",
+    "Scanning for Unauthorized Identity Expression...",
+    "Generating TPS Report...",
+  ];
 
   const removePronouns = (text) => {
     // List of pronouns to remove (case-insensitive)
@@ -14,9 +43,38 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const compliantText = removePronouns(inputText);
-    setOutputText(compliantText);
-    setProcessCount(prev => prev + 1);
+    setIsProcessing(true);
+    setOutputText('');
+    let messageIndex = 0;
+
+    // Get 3 random unique messages
+    const shuffledMessages = [...bureaucraticMessages]
+      .sort(() => Math.random() - 0.5)
+      .slice(0, 3);
+
+    // Show loading messages with delays
+    const messageInterval = setInterval(() => {
+      if (messageIndex < 3) { // Show 3 messages
+        setLoadingMessage(shuffledMessages[messageIndex]);
+        messageIndex++;
+      } else {
+        clearInterval(messageInterval);
+        setIsProcessing(false);
+        setLoadingMessage('');
+        const compliantText = removePronouns(inputText);
+        setOutputText(compliantText);
+        setProcessCount(prev => prev + 1);
+      }
+    }, 2500); // 2.5 seconds per message
+  };
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(outputText);
+      // Optional: You could add a temporary "Copied!" message here
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
   };
 
   return (
@@ -52,14 +110,27 @@ function App() {
           <button type="submit">INITIATE PRONOUN COMPLIANCE PROTOCOL</button>
         </form>
 
-        {outputText && (
+        {isProcessing && (
+          <div className="loading-container">
+            <div className="loading-spinner"></div>
+            <p className="loading-message">{loadingMessage}</p>
+          </div>
+        )}
+
+        {outputText && !isProcessing && (
           <div className="output-section">
             <h3>✅ GOVERNMENT SANCTIONED VERSION:</h3>
             <div className="output-box">
               {outputText}
             </div>
+            <button
+              onClick={copyToClipboard}
+              className="copy-button"
+            >
+              📋 COPY COMPLIANT TEXT TO CLIPBOARD
+            </button>
             <div className="certification">
-              <small>* This text has been certified pronoun-free by the Department of Linguistic Conformity</small>
+              <small>* This text has been certified pronoun-free by the Office of Personnel Management</small>
               <br />
               <small>* Document ID: {Math.random().toString(36).substr(2, 9).toUpperCase()}</small>
               <br />
