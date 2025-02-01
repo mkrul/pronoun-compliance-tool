@@ -218,17 +218,17 @@ small {
   }
 
   h1 {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   h2 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   button {
     width: 100%;
     padding: 12px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .badge-container {
@@ -248,8 +248,6 @@ small {
 
   textarea {
     min-height: 120px;
-    font-size: 14px;
-    margin: 10px 0;
     width: 100%;
   }
 
@@ -262,32 +260,47 @@ small {
   .output-box {
     width: 100%;
     box-sizing: border-box;
-    font-size: 14px;
   }
 
   .warning-box {
-    font-size: 14px;
     padding: 10px;
     margin: 10px 0;
   }
 
   .badge {
-    font-size: 12px;
     padding: 4px 8px;
   }
 
   .certification {
-    font-size: 12px;
     padding: 8px;
-  }
-
-  .loading-message {
-    font-size: 14px;
   }
 
   .copy-button {
     width: 100%;
-    font-size: 12px;
     padding: 8px 16px;
   }
+}
+
+textarea.error {
+  border-color: #bf0a30;
+  background-color: #fff5f5;
+}
+
+.error-message {
+  color: #bf0a30;
+  font-weight: bold;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff5f5;
+  border: 2px solid #bf0a30;
+  border-radius: 4px;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background-color: #cccccc;
 }

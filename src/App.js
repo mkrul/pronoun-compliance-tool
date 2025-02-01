@@ -7,6 +7,7 @@ function App() {
   const [processCount, setProcessCount] = useState(0);
   const [isProcessing, setIsProcessing] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState('');
+  const [showError, setShowError] = useState(false);
 
   const bureaucraticMessages = [
     "Reviewing Email Signature Compliance Protocols...",
@@ -43,6 +44,13 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!inputText.trim()) {
+      setShowError(true);
+      return;
+    }
+
+    setShowError(false);
     setIsProcessing(true);
     setOutputText('');
     let messageIndex = 0;
@@ -66,6 +74,11 @@ function App() {
         setProcessCount(prev => prev + 1);
       }
     }, 2500); // 2.5 seconds per message
+  };
+
+  const handleInputChange = (e) => {
+    setInputText(e.target.value);
+    if (showError) setShowError(false);
   };
 
   const copyToClipboard = async () => {
@@ -101,13 +114,23 @@ function App() {
               Input Non-Compliant Text Below:
               <textarea
                 value={inputText}
-                onChange={(e) => setInputText(e.target.value)}
+                onChange={handleInputChange}
                 placeholder="EXAMPLE: She is the project manager and her expertise is invaluable."
+                className={showError ? 'error' : ''}
               />
             </label>
+            {showError && (
+              <div className="error-message">
+                ⚠️ NOTICE: NO TEXT DETECTED. PLEASE INPUT TEXT FOR PRONOUN COMPLIANCE PROCESSING.
+              </div>
+            )}
           </div>
 
-          <button type="submit">INITIATE PRONOUN COMPLIANCE PROTOCOL</button>
+          <button
+            type="submit"
+          >
+            INITIATE PRONOUN COMPLIANCE PROTOCOL
+          </button>
         </form>
 
         {isProcessing && (
