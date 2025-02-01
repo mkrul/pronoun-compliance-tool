@@ -4,10 +4,21 @@ import './App.css';
 function App() {
   const [inputText, setInputText] = useState('');
   const [outputText, setOutputText] = useState('');
-  const [processCount, setProcessCount] = useState(0);
+  const [processCount, setProcessCount] = useState(() => {
+    const savedCount = localStorage.getItem('processCount');
+    if (savedCount) {
+      return parseInt(savedCount);
+    }
+    // Generate random number between 30,000 and 90,000
+    return Math.floor(Math.random() * (90000 - 20000 + 1)) + 20000;
+  });
   const [isProcessing, setIsProcessing] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState('');
   const [showError, setShowError] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('processCount', processCount.toString());
+  }, [processCount]);
 
   const bureaucraticMessages = [
     "Reviewing Email Signature Compliance Protocols...",
@@ -171,7 +182,7 @@ function App() {
           </div>
           <div className="stat-box">
             <h4>Documents Processed</h4>
-            <p>{processCount}</p>
+            <p>{processCount.toLocaleString()}</p>
           </div>
           <div className="stat-box">
             <h4>Compliance Rate</h4>
