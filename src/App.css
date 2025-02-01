@@ -103,6 +103,8 @@ button:hover {
   border-radius: 4px;
   margin: 10px 0;
   text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 small {

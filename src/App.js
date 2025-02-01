@@ -49,8 +49,9 @@ function App() {
 
   const removePronouns = (text) => {
     // List of pronouns to remove (case-insensitive)
-    const pronouns = /\b(he|him|his|she|her|hers|they|them|their|theirs|we|us|our|ours|i|me|my|mine|you|your|yours)\b/gi;
-    return text.replace(pronouns, '[REDACTED FOR NATIONAL SECURITY]');
+    const pronouns = /\b(he|him|his|she|her|hers|they|them|their|theirs|we|us|our|ours|i|me|my|mine|you|your|yours|it|its|itself|myself|yourself|himself|herself|themselves|ourselves|each other|one another|who|whom|whose|which|that|what|whatever|whoever|whomever|this|that|these|those|anybody|anyone|anything|everybody|everyone|everything|nobody|no one|nothing|somebody|someone|something|both|few|many|several|all|any|most|none|some|either|neither|each|every|other|another|who|whom|which|what|whose|who|whom|which|that|whose|all|any|each|every|no one|none|some|anybody|anyone|anything|I|you|he|she|it|we|they|my|your|his|her|its|our|their|this|that|these|those|who|whom|which|what|whose|all|any|each|every|no one|none|some|anybody|anyone|anything|each other|one another|myself|yourself|himself|herself|itself|ourselves|themselves|ce|cir|cirs|cirself|co|cos|coself|cy|cyr|cyrs|cyrself|ey|em|eir|eirs|emself|hey|hem|heir|heirs|hemself|ne|nem|nir|nirs|nemself|qui|quem|quis|quemself|sie|hir|hirs|hirself|tey|tem|teir|teirs|temself|xe|xem|xyr|xyrs|xemself|xie|yo|yos|yoself|ze|zir|zirs|zirself|ve|vis|ver|verself)\b/gi;
+    // Remove pronouns while preserving whitespace
+    return text.replace(pronouns, '');
   };
 
   const handleSubmit = (e) => {
