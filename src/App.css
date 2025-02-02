@@ -332,3 +332,13 @@ button:disabled {
 button:disabled:hover {
   background-color: #cccccc;
 }
+
+@media (min-width: 520px) {
+  .App-header h1 {
+    font-size: 26px;
+  }
+
+  .App-header h2 {
+    font-size: 18px;
+  }
+}
