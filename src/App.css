@@ -82,7 +82,7 @@ button {
   font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
-  margin: 20px 0;
+  margin: 20px 0 5px 0;
 }
 
 button:hover {

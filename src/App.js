@@ -26,7 +26,7 @@ function App() {
     "Initiating Gender Ideology Detection Scan...",
     "Reviewing Biological Truth Parameters...",
     "Establishing Anti-Woke Protocol...",
-    "Scheduling Meeting That Could Have Been An Email...",
+    "Scheduling Meetings That Could Have Been An Email...",
     "Inculcating Compliance Metrics...",
     "Generating Compliance Certificate...",
     "Synergizing Oligarchic Workflows...",
@@ -45,9 +45,8 @@ function App() {
     "Generating TPS Report...",
     "Validating Autocratic Efficiency Standards...",
     "Optimizing Bureaucratic Inertia Coefficients...",
-    "Ensuring Bureaucratic Mediocrity Compliance...",
+    "Ensuring Bureaucratic Mediocrity...",
     "Generating Compliance Certificate...",
-    "Reviewing Intimate Space Designations...",
     "Validating Binary Classifications..."
   ];
 
