@@ -289,7 +289,7 @@ small {
 
 @media screen and (max-width: 450px) {
   .App-header {
-    padding: 13px !important;
+    padding: 30px 13px 13px 13px !important;
   }
 
   .badge-container {
