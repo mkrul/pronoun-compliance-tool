@@ -130,7 +130,7 @@ function App() {
 
       <main>
         <div className="warning-box">
-          ⚠️ TRIGGER WARNING: The following text area may contain unauthorized pronouns that could threaten national security and/or the fabric of society. Viewer discretion is advised. By proceeding, you acknowledge the risks of exposure to non-compliant language.
+          ⚠️ TRIGGER WARNING: The following area may contain unauthorized pronouns that could threaten national security and/or the fabric of society. Viewer discretion is advised. By proceeding, you acknowledge the risks of exposure to non-compliant language.
         </div>
 
         <form onSubmit={handleSubmit}>
