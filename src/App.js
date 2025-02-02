@@ -49,7 +49,7 @@ function App() {
 
   const removePronouns = (text) => {
     // List of pronouns to remove (case-insensitive)
-    const pronouns = /\b(he|him|his|she|her|hers|they|them|their|theirs|we|us|our|ours|i|me|my|mine|you|your|yours|it|its|itself|myself|yourself|himself|herself|themselves|ourselves|each other|one another)\b\s*/gi;
+    const pronouns = /\b(all|another|any|anybody|anyone|anything|as|aught|both|each|each other|either|enough|everybody|everyone|everything|few|he|her|hers|herself|him|himself|his|I|idem|it|its|itself|many|me|mine|most|my|myself|naught|neither|no one|nobody|none|nothing|nought|one|one another|other|others|ought|our|ours|ourself|ourselves|several|she|some|somebody|someone|something|somewhat|such|suchlike|that|thee|their|theirs|theirself|theirselves|them|themself|themselves|there|these|they|thine|this|those|thou|thy|thyself|us|we|what|whatever|whatnot|whatsoever|whence|where|whereby|wherefrom|wherein|whereinto|whereof|whereon|wherever|wheresoever|whereto|whereunto|wherewith|wherewithal|whether|which|whichever|whichsoever|who|whoever|whom|whomever|whomso|whomsoever|whose|whosever|whosesoever|whoso|whosoever|ye|yon|yonder|you|your|yours|yourself|yourselves|ze|hir|hirs|hirself|xe|xem|xyrs|xyrself|ey|em|eir|emself|per|pers|perself|fae|faer|faers|faerself)\b\s*/gi;
 
     // First, split into paragraphs (split on one or more newlines)
     const paragraphs = text.split(/\n+/);
