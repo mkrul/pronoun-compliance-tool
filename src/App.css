@@ -307,6 +307,14 @@ small {
   .subtitle {
     font-size: 14px;
   }
+
+  .App-header h3 {
+    font-size: 14px;
+  }
+
+  .output-section {
+    padding: 15px;
+  }
 }
 
 textarea.error {

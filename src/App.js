@@ -25,7 +25,7 @@ function App() {
     "Validating Legal Name Requirements...",
     "Initiating Gender Ideology Detection Scan...",
     "Reviewing Biological Truth Parameters...",
-    "Establishing Wokeism Prevention Protocol...",
+    "Establishing Anti-Woke Protocol...",
     "Scheduling Meeting That Could Have Been An Email...",
     "Inculcating Compliance Metrics...",
     "Generating Compliance Certificate...",
@@ -39,12 +39,16 @@ function App() {
     "Calculating Taxpayer Savings...",
     "Reviewing Acceptable Times New Roman Variants...",
     "Submitting Form 1103(a)(1) in Quintuplicate...",
-    "Validating Biological Email Format...",
-    "Detecting Non-Compliant Outlook Features...",
     "Measuring Social Fabric Integrity...",
     "Cross-Referencing Legal Name Database...",
     "Scanning for Unauthorized Identity Expression...",
     "Generating TPS Report...",
+    "Validating Autocratic Efficiency Standards...",
+    "Optimizing Bureaucratic Inertia Coefficients...",
+    "Ensuring Bureaucratic Mediocrity Compliance...",
+    "Generating Compliance Certificate...",
+    "Reviewing Intimate Space Designations...",
+    "Validating Binary Classifications..."
   ];
 
   const removePronouns = (text) => {
@@ -172,7 +176,7 @@ function App() {
               onClick={copyToClipboard}
               className="copy-button"
             >
-              📋 COPY COMPLIANT TEXT TO CLIPBOARD
+              📋 COPY TO CLIPBOARD
             </button>
             <div className="certification">
               <small>* This text has been certified pronoun-free by the Office of Personnel Management</small>
