@@ -119,7 +119,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>🏛️ PRONOUN COMPLIANCE TOOL 🏛️</h1>
+        <h1>PRONOUN COMPLIANCE TOOL</h1>
         <h2>🦅 Make Email Signatures Great Again! 🦅</h2>
         <p className="subtitle">Executive Order Compliance System v1.0.0.0.1</p>
         <div className="badge-container">
