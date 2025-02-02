@@ -192,7 +192,7 @@ function App() {
             <p className="savings">$0.00</p>
           </div>
           <div className="stat-box">
-            <h4>Documents Processed</h4>
+            <h4>Emails Processed</h4>
             <p>{processCount.toLocaleString()}</p>
           </div>
           <div className="stat-box">
