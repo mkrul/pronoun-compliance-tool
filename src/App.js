@@ -205,7 +205,7 @@ function App() {
           </div>
         </div>
         <div className="footer-text">
-          <p>A Proud Product of Your Tax Dollars at Work</p>
+          <p>🇺🇸 A Proud Product of Your Tax Dollars at Work</p>
           <small>This website cost approximately $34.7 billion to develop (2.839% under projected budget!)</small>
           <br />
           <small>Powered by Web3 Blockchain AI Quantum Metaverse Cloud Synergy Solutions™ LLC (Patent Pending)</small>
