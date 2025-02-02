@@ -299,6 +299,14 @@ small {
   .App-header h2 {
     font-size: 17px;
   }
+
+  .badge-container {
+    margin-top: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
 }
 
 textarea.error {
